@@ -137,5 +137,6 @@ dmypy.json
 .pytype/
 .venv/
 .vscode/
+staticfiles
 
 # End of https://www.toptal.com/developers/gitignore/api/python
