@@ -6,8 +6,16 @@ authors = ["Vijayeta Rangarajan <vijayetar@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+djangorestframework = "^3.11.0"
+whitenoise = "^5.1.0"
+django-environ = "^0.4.5"
+gunicorn = "^20.0.4"
+django-cors-headers = "^3.4.0"
+psycopg2-binary = "^2.8.5"
+django = "^3.0.8"
 
 [tool.poetry.dev-dependencies]
+black = "^19.10b0"
 
 [build-system]
 requires = ["poetry>=0.12"]
