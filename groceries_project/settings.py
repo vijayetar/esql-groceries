@@ -54,8 +54,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -145,14 +145,15 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-# CORS_ORIGIN_WHITELIST=[
-#     "http://localhost:3000",
-#     # "https://xxx.vercel.app",
-# ]
+CORS_ORIGIN_WHITELIST=[
+    "http://localhost:3000",
+    "https://nextjs-groceries.vijayetar.vercel.app/",
+    "https://groceries-fun-api.herokuapp.com/api/v1/groceries/"
+]
 
-# CORS_ORIGIN_REGEX_WHITELIST = [
-#     # r"^htpps://xxx-next.\w+\.vercel.app$",
-# ]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    r"^htpps://xxx-next.\w+\.vercel.app$",
+]
 #production
 if ENVIRONMENT == 'production':
     SECURE_SSL_REDIRECT = True
@@ -163,3 +164,4 @@ if ENVIRONMENT == 'production':
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
